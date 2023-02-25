@@ -1,0 +1,13 @@
+.RichText {
+  max-inline-size: 72ch;
+}
+
+.RichText > :first-child {
+  margin-block-start: 0;
+}
+
+.RichText
+  :where(p, ul, ol, blockquote, table, pre)
+  + :where(p, ul, ol, blockquote, table, pre) {
+  margin-block-start: calc(var(--line-height, 1) * 1em);
+}

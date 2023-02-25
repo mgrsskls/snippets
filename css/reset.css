@@ -8,6 +8,12 @@ table {
   border-spacing: 0;
 }
 
+caption,
+th {
+  text-align: start;
+}
+
+th,
 td {
   padding: 0;
 }
@@ -53,7 +59,8 @@ input:where(
     [type="week"]
   ),
 select,
-textarea {
+textarea,
+table {
   inline-size: 100%;
 }
 
@@ -89,41 +96,17 @@ summary::-webkit-details-marker {
   display: none;
 }
 
-:where(
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    blockquote,
-    dl,
-    dd,
-    ul,
-    ol,
-    li,
-    p,
-    pre,
-    figure
-  ):not(
+blockquote:not(:has(p))::before {
+  content: open-quote;
+}
+
+blockquote:not(:has(p))::after {
+  content: close-quote;
+}
+
+:where(h1, h2, h3, h4, h5, h6, blockquote, dl, dd, ul, ol, li, p, pre):not(
     .RichText
-      :where(
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        blockquote,
-        dl,
-        dd,
-        ul,
-        ol,
-        li,
-        p,
-        pre,
-        figure
-      )
+      :where(h1, h2, h3, h4, h5, h6, blockquote, dl, dd, ul, ol, li, p, pre)
   ) {
   margin: 0;
   padding: 0;
