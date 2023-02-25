@@ -1,0 +1,131 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td {
+  padding: 0;
+}
+
+code {
+  font-family: Courier, monospace;
+  font-size: 0.875em;
+}
+
+button,
+input,
+select,
+textarea,
+::file-selector-button {
+  color: inherit;
+  font: inherit;
+  padding: 0;
+}
+
+button,
+input:where([type="submit"], [type="button"], [type="reset"], [type="image"]),
+::file-selector-button {
+  appearance: none;
+  background: none;
+  border: none;
+  border-radius: none;
+  cursor: pointer;
+}
+
+input:where(
+    [type="date"],
+    [type="datetime-local"],
+    [type="email"],
+    [type="month"],
+    [type="number"],
+    [type="password"],
+    [type="range"],
+    [type="search"],
+    [type="tel"],
+    [type="text"],
+    [type="time"],
+    [type="url"],
+    [type="week"]
+  ),
+select,
+textarea {
+  inline-size: 100%;
+}
+
+input:where(
+    [type="color"],
+    [type="date"],
+    [type="datetime-local"],
+    [type="email"],
+    [type="month"],
+    [type="number"],
+    [type="password"],
+    [type="search"],
+    [type="tel"],
+    [type="text"],
+    [type="time"],
+    [type="url"],
+    [type="week"]
+  ),
+select,
+textarea {
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background: #eee;
+}
+
+summary {
+  list-style: none;
+  cursor: default;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+:where(
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    blockquote,
+    dl,
+    dd,
+    ul,
+    ol,
+    li,
+    p,
+    pre,
+    figure
+  ):not(
+    .RichText
+      :where(
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        blockquote,
+        dl,
+        dd,
+        ul,
+        ol,
+        li,
+        p,
+        pre,
+        figure
+      )
+  ) {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
