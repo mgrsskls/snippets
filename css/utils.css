@@ -4,7 +4,7 @@
  * visually hide elements but keep them accessible in screen readers
  */
 
-.visually-hidden:not(:focus):not(:active) {
+.u-hiddenVisually {
   position: absolute;
   width: 1px;
   height: 1px;
